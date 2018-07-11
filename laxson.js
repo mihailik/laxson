@@ -2,13 +2,13 @@
 /// <reference types="typescript" />
 
 /** @type {{ parse?(str: string): any }} */
-var TSON;
+var LAXSON;
 (
     /**
-     * @param TSON
+     * @param LAXSON
      * @param {typeof import('typescript')} ts
      */
-    function (TSON, ts) {
+    function (LAXSON, ts) {
 
         /**
          * @param {string} str
@@ -104,10 +104,10 @@ var TSON;
                     str.slice(node.pos, node.end);
             }
         }
-        TSON.parse = parse;
+        LAXSON.parse = parse;
     })(
         typeof exports !== 'undefined' && exports ? exports :
-        TSON || (TSON = {}),
+        LAXSON || (LAXSON = {}),
             typeof ts !== 'undefined' && ts ? ts :
                 require('typescript')
     );

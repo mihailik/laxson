@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node demo/demo"
   },
-  "main": "tson.js",
+  "main": "laxson.js",
   "keywords": ["JSON", "typescript"],
   "author": "",
   "license": "ISC",

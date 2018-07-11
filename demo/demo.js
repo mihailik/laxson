@@ -6,7 +6,7 @@ if (typeof require === 'function' && typeof process !== 'undefined' && typeof pr
   process.stdin.resume();
   process.stdin.setEncoding('utf8');
 
-  TSON = require('../tson.js');
+  LAXSON = require('../laxson.js');
 
   var lingeringLine = "";
 
@@ -18,14 +18,14 @@ if (typeof require === 'function' && typeof process !== 'undefined' && typeof pr
     lines.forEach(processLine);
 
     function processLine(line) {
-      var obj = TSON.parse(line);
+      var obj = LAXSON.parse(line);
       console.log(JSON.stringify(obj, null, 2));
     }
   });
 }
 else if (typeof window !== 'undefined' && window) {
 
-  var TSON;
+  var LAXSON;
 
   /** @type {typeof import('typescript')} */
   var ts;
@@ -35,7 +35,7 @@ else if (typeof window !== 'undefined' && window) {
 
   function parse() {
     var srcText = src.value || '';
-    var res = TSON.parse(srcText);
+    var res = LAXSON.parse(srcText);
 
     out.value = JSON.stringify(res, null, 2);
   }
