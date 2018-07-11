@@ -1,0 +1,15 @@
+{
+  "name": "laxson",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node demo/demo"
+  },
+  "main": "tson.js",
+  "keywords": ["JSON", "typescript"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^2.9.2"
+  }
+}
